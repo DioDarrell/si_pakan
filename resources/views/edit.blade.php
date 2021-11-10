@@ -48,13 +48,13 @@ Coded by www.creative-tim.com
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="active ">
-                        <a href="/barang">
+                        <a href="/products">
                             <i class="nc-icon nc-tile-56"></i>
                             <p>Table List</p>
                         </a>
                     </li>
                     <li>
-                        <a href="./typography.html">
+                        <a href="/request">
                             <i class="nc-icon nc-caps-small"></i>
                             <p>Request List</p>
                         </a>
@@ -85,40 +85,54 @@ Coded by www.creative-tim.com
                             <div class="card-header">
                                 <h4 class="card-title"> Data Barang</h4>
                             </div>
-                            @foreach($barang as $b)
-                            <form action="/barang/update" method="post">
+                            <form action="/products/update/{{$product->id}}" method="post">
+                                @method('PUT')
                                 {{ csrf_field() }}
-                                <input type="hidden" name="id" value="{{ $b->id_barang }}"> <br />
                                 <div class="row">
                                     <div class="col-md-5 pr-1">
-                                        <div class="form-group">
+                                        <div class="form-group" style="padding-left: 17px">
                                             <label>Nama</label>
-                                            <input input type="text" name="nama" required="required" class="form-control" placeholder="Nama" value="{{ $b->nama }}">
+                                            <input input type="text" name="name" value="{{$product->name}}" required="required" class="form-control" placeholder="Nama">
                                         </div>
                                     </div>
                                 </div>
-                                <div class=" row">
+                                <div class="row">
                                     <div class="col-md-5 pr-1">
-                                        <div class="form-group">
+                                        <div class="form-group" style="padding-left: 17px">
                                             <label>Jumlah</label>
-                                            <input type="int" name="jumlah" required="required" class="form-control" placeholder="Jumlah" value="{{ $b->jumlah }}">
+                                            <input type="int" name="stocks" value="{{$product->stocks}}" required="required" class="form-control" placeholder="Jumlah">
                                         </div>
                                     </div>
                                 </div>
-                                <div class=" row">
+                                <div class="row">
                                     <div class="col-md-5 pr-1">
-                                        <div class="form-group">
+                                        <div class="form-group" style="padding-left: 17px">
                                             <label>Harga</label>
-                                            <input input type="int" name="harga" required="required" class="form-control" placeholder="Harga" value="{{ $b->harga }}">
+                                            <input input type="int" name="price" value="{{$product->price}}" required="required" class="form-control" placeholder="Harga">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 pr-1">
+                                        <div class="form-group" style="padding-left: 17px">
+                                            <label>Deskripsi</label>
+                                            <input input type="string" name="description" value="{{$product->description}}" required="required" class="form-control" placeholder="Deskripsi">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 pr-1">
+                                        <div class="form-group" style="padding-left: 17px">
+                                            <label>Gambar</label>
+                                            <input input type="string" name="image_url" value="{{$product->image_url}}" required="required" class="form-control" placeholder="Image url">
                                         </div>
                                     </div>
                                 </div>
                                 <div class=" update mr-auto">
-                                    <a href="/barang" class="btn btn-primary btn-round btn-danger">Batal</a>
+                                    <a href="/products" class="btn btn-primary btn-round btn-danger">Batal</a>
                                     <button type="submit" class="btn btn-primary btn-round btn-success">Simpan</button>
                                 </div>
                             </form>
-                            @endforeach
                         </div>
                     </div>
                     <footer class="footer footer-black  footer-white ">
@@ -160,28 +174,23 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
-
 <!-- <!DOCTYPE html>
 <html>
 <body>
-    <h3>Edit Barang</h3>
+    <h3>Data Barang</h3>
 
     <a href="/barang"> Kembali</a>
 
     <br />
     <br />
 
-    @foreach($barang as $b)
-    <form action="/barang/update" method="post">
+    <form action="/barang/store" method="post">
         {{ csrf_field() }}
-        <input type="hidden" name="id" value="{{ $b->id_barang }}"> <br />
-        Nama <input type="text" required="required" name="nama" value="{{ $b->nama }}"> <br />
-        Jumlah <input type="int" required="required" name="jumlah" value="{{ $b->jumlah }}"> <br />
-        Harga <input type="int" required="required" name="harga" value="{{ $b->harga }}"> <br />
+        Nama <input type="text" name="nama" required="required"> <br />
+        Jumlah <input type="int" name="jumlah" required="required"> <br />
+        Harga <input type="int" name="harga" required="required"> <br />
         <input type="submit" value="Simpan Data">
     </form>
-    @endforeach
-
 
 </body>
 

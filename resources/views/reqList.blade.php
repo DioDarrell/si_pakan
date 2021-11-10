@@ -47,13 +47,13 @@ Coded by www.creative-tim.com
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active ">
-                        <a href="/products">
+                    <li>
+                        <a href="/barang">
                             <i class="nc-icon nc-tile-56"></i>
-                            <p>Table List</p>
+                            <p>Data Barang</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active ">
                         <a href="/request">
                             <i class="nc-icon nc-caps-small"></i>
                             <p>Request List</p>
@@ -83,10 +83,7 @@ Coded by www.creative-tim.com
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title"> Data Barang</h4>
-                            </div>
-                            <div class="update mr-auto">
-                                <a href="/products/tambah" class="btn btn-primary btn-round btn-success">Tambah Barang</a>
+                                <h4 class="card-title"> Request List</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -102,34 +99,7 @@ Coded by www.creative-tim.com
                                                 Harga
                                             </th>
                                         </thead>
-                                        <tbody>
-                                            @foreach($products as $b)
-                                            <tr>
-                                                <td>
-                                                    {{ $b->name }}
-                                                </td>
-                                                <td>
-                                                    {{ $b->stocks }}
-                                                </td>
-                                                <td>
-                                                    {{ $b->price }}
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <a href="/products/edit/{{ $b->id }}" class="text-warning">
-                                                            <i class="fa fa-pencil"> </i>
-                                                            Edit
-                                                        </a>
-                                                        |
-                                                        <form action="/products/{{$b->id}}" method="POST">
-                                                            @method('DELETE')
-                                                            {{ csrf_field() }}
-                                                            <input type="submit" value="Delete">
-                                                        </form>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
+                                        
                                     </table>
                                 </div>
                             </div>
@@ -174,3 +144,5 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
+
+

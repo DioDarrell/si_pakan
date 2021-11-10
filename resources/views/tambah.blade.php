@@ -48,13 +48,13 @@ Coded by www.creative-tim.com
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="active ">
-                        <a href="/barang">
+                        <a href="/products">
                             <i class="nc-icon nc-tile-56"></i>
                             <p>Table List</p>
                         </a>
                     </li>
                     <li>
-                        <a href="./typography.html">
+                        <a href="/request">
                             <i class="nc-icon nc-caps-small"></i>
                             <p>Request List</p>
                         </a>
@@ -85,34 +85,50 @@ Coded by www.creative-tim.com
                             <div class="card-header">
                                 <h4 class="card-title"> Data Barang</h4>
                             </div>
-                            <form action="/barang/store" method="post">
+                            <form action="/products/store" method="post">
                                 {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-md-5 pr-1">
-                                        <div class="form-group">
+                                        <div class="form-group" style="padding-left: 17px">
                                             <label>Nama</label>
-                                            <input input type="text" name="nama" required="required" class="form-control" placeholder="Nama">
+                                            <input input type="text" name="name" required="required" class="form-control" placeholder="Nama">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-5 pr-1">
-                                        <div class="form-group">
+                                        <div class="form-group" style="padding-left: 17px">
                                             <label>Jumlah</label>
-                                            <input type="int" name="jumlah" required="required" class="form-control" placeholder="Jumlah">
+                                            <input type="int" name="stocks" required="required" class="form-control" placeholder="Jumlah">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-5 pr-1">
-                                        <div class="form-group">
+                                        <div class="form-group" style="padding-left: 17px">
                                             <label>Harga</label>
-                                            <input input type="int" name="harga" required="required" class="form-control" placeholder="Harga">
+                                            <input input type="int" name="price" required="required" class="form-control" placeholder="Harga">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 pr-1">
+                                        <div class="form-group" style="padding-left: 17px">
+                                            <label>Deskripsi</label>
+                                            <input input type="string" name="description" required="required" class="form-control" placeholder="Deskripsi">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 pr-1">
+                                        <div class="form-group" style="padding-left: 17px">
+                                            <label>Gambar</label>
+                                            <input input type="string" name="image_url" required="required" class="form-control" placeholder="Image url">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="update mr-auto">
-                                    <a href="/barang" class="btn btn-primary btn-round btn-danger">Batal</a>
+                                    <a href="/products" class="btn btn-primary btn-round btn-danger">Batal</a>
                                     <button type="submit" class="btn btn-primary btn-round btn-success">Simpan</button>
                                 </div>
                             </form>

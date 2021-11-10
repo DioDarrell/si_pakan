@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,9 +25,11 @@ Route::get('blog', function () {
     return view('blog');
 });
 
-Route::get('barang', 'DataBarangController@index');
-Route::get('/barang/tambah', 'DataBarangController@tambah');
-Route::post('/barang/store', 'DataBarangController@store');
-Route::get('/barang/edit/{id}', 'DataBarangController@edit');
-Route::post('/barang/update', 'DataBarangController@update');
-Route::get('/barang/hapus/{id}', 'DataBarangController@hapus');
+Route::get('products', 'DataBarangController@index');
+Route::get('/products/tambah', 'DataBarangController@tambah');
+Route::post('/products/store', 'DataBarangController@store');
+Route::get('/products/edit/{id}', 'DataBarangController@edit');
+Route::put('/products/{id}', 'DataBarangController@update');
+Route::delete('/products/{id}', 'DataBarangController@hapus');
+
+Route::get('request', 'DataRequestController@reqList');
