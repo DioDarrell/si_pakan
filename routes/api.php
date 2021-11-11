@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataBarangApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,6 +14,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('products', 'DataBarangApiController@index');
+Route::post('/products', 'DataBarangApiController@store');
+Route::get('/products/{id}', 'DataBarangApiController@show');
+Route::put('/products/{id}', 'DataBarangApiController@update');
+Route::delete('/products/{id}', 'DataBarangApiController@hapus');

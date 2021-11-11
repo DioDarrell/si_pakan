@@ -85,7 +85,7 @@ Coded by www.creative-tim.com
                             <div class="card-header">
                                 <h4 class="card-title"> Data Barang</h4>
                             </div>
-                            <form action="/products/update/{{$product->id}}" method="post">
+                            <form action="/products/edit/{{$product->id}}" method="post">
                                 @method('PUT')
                                 {{ csrf_field() }}
                                 <div class="row">

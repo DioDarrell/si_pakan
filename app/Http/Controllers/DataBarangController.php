@@ -45,8 +45,9 @@ class DataBarangController extends Controller
     // method untuk edit data pegawai
     public function edit($id)
     {
-        $product = Product::find($id);
-        return view('edit', compact(['product']));
+        //return view('edit');
+       $product = Product::find($id);
+       return view('edit', compact(['product']));
         // mengambil data pegawai berdasarkan id yang dipilih
        // $barang = DB::table('products')->where('id_barang', $id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php

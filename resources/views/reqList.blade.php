@@ -48,7 +48,7 @@ Coded by www.creative-tim.com
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li>
-                        <a href="/barang">
+                        <a href="/products">
                             <i class="nc-icon nc-tile-56"></i>
                             <p>Data Barang</p>
                         </a>
