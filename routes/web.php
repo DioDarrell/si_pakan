@@ -14,19 +14,19 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('halo', function () {
-    return "Halo, Selamat datang di tutorial laravel www.malasngoding.com";
-});
+// Route::get('halo', function () {
+//     return "Halo, Selamat datang di tutorial laravel www.malasngoding.com";
+// });
 
-Route::get('blog', function () {
-    return view('blog');
-});
+// Route::get('blog', function () {
+//     return view('blog');
+// });
 
-Route::get('products', 'DataBarangController@index');
+Route::get('/', 'DataBarangController@index');
 Route::get('/products/tambah', 'DataBarangController@tambah');
 Route::post('/products/store', 'DataBarangController@store');
 Route::get('/products/edit/{id}', 'DataBarangController@edit');
