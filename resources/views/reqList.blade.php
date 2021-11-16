@@ -48,7 +48,7 @@ Coded by www.creative-tim.com
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li>
-                        <a href="/products">
+                        <a href="/">
                             <i class="nc-icon nc-tile-56"></i>
                             <p>Data Barang</p>
                         </a>
@@ -85,21 +85,62 @@ Coded by www.creative-tim.com
                             <div class="card-header">
                                 <h4 class="card-title"> Request List</h4>
                             </div>
+                            <div class="update mr-auto">
+                                <a href="/request/cetak_pdf" class="btn btn-primary btn-round btn-success" target="_blank">CETAK PDF</a>
+                            </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class=" text-primary text-success">
                                             <th>
-                                                Nama
+                                                Nama Customer
                                             </th>
                                             <th>
-                                                Jumlah
+                                                Nama Item
                                             </th>
                                             <th>
-                                                Harga
+                                                Alamat
+                                            </th>
+                                            <th>
+                                                No.Telepon
+                                            </th>
+                                            <th>
+                                                Waktu
+                                            </th>
+                                            <th>
+                                                Berat
+                                            </th>
+                                            <th>
+                                                Price
                                             </th>
                                         </thead>
-                                        
+                                        <tbody>
+                                            @foreach($requestlist as $b)
+                                            <tr>
+                                                <td>
+                                                    {{ $b->customer_name }}
+                                                </td>
+                                                <td>
+                                                    {{ $b->item_name }}
+                                                </td>
+                                                <td>
+                                                    {{ $b->address }}
+                                                </td>
+                                                <td>
+                                                    {{ $b->phone }}
+                                                </td>
+                                                <td>
+                                                    {{ $b->req_time }}
+                                                </td>
+                                                <td>
+                                                    {{ $b->weight }}
+                                                </td>
+                                                <td>
+                                                    {{ $b->price }}
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -144,5 +185,3 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
-
-

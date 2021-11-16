@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Product;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use PDF;
 
 class DataBarangController extends Controller
 {
@@ -19,6 +21,7 @@ class DataBarangController extends Controller
         // mengirim data pegawai ke view index
        // return view('index', ['products' => $products]);
     }
+    
 
     // method untuk menampilkan view form tambah pegawai
     public function tambah()
@@ -39,7 +42,7 @@ class DataBarangController extends Controller
         //     'harga' => $request->harga
         // ]);
         // alihkan halaman ke halaman pegawai
-        return redirect('/products');
+        return redirect('/');
     }
 
     // method untuk edit data pegawai
@@ -59,7 +62,7 @@ class DataBarangController extends Controller
     {
         $product=Product::find($id);
         $product->update($request->all());
-        return redirect('/products');
+        return redirect('/');
         // update data pegawai
         // DB::table('barang')->where('id_barang', $request->id)->update([
         //     'nama' => $request->nama,
@@ -79,6 +82,14 @@ class DataBarangController extends Controller
         //DB::table('barang')->where('id_barang', $id)->delete();
 
         // alihkan halaman ke halaman pegawai
-        return redirect('/products');
+        return redirect('/');
+    }
+
+    public function cetak_pdf()
+    {
+        $products = Product::all();
+
+        $pdf = PDF::loadview('product_pdf', ['products' => $products]);
+        return $pdf->stream();
     }
 }

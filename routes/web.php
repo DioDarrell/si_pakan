@@ -34,3 +34,6 @@ Route::put('/products/{id}', 'DataBarangController@update');
 Route::delete('/products/{id}', 'DataBarangController@hapus');
 
 Route::get('request', 'DataRequestController@reqList');
+Route::get('request/cetak_pdf', 'DataRequestController@cetak_pdf');
+
+Route::get('/products/cetak_pdf', 'DataBarangController@cetak_pdf');

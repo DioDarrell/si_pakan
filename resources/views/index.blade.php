@@ -48,7 +48,7 @@ Coded by www.creative-tim.com
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="active ">
-                        <a href="/products">
+                        <a href="/">
                             <i class="nc-icon nc-tile-56"></i>
                             <p>Table List</p>
                         </a>
@@ -87,6 +87,8 @@ Coded by www.creative-tim.com
                             </div>
                             <div class="update mr-auto">
                                 <a href="/products/tambah" class="btn btn-primary btn-round btn-success">Tambah Barang</a>
+                                <br />
+                                <a href="/products/cetak_pdf" class="btn btn-primary btn-round btn-success" target="_blank">CETAK PDF</a>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
