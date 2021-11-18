@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Requestlist;
-use PDF;
+use Barryvdh\DomPDF\PDF as PDF;
 
 class DataRequestController extends Controller
 {
