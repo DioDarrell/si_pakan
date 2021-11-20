@@ -19,3 +19,9 @@ Route::post('/products', 'DataBarangApiController@store');
 Route::get('/products/{id}', 'DataBarangApiController@show');
 Route::put('/products/{id}', 'DataBarangApiController@update');
 Route::delete('/products/{id}', 'DataBarangApiController@hapus');
+
+Route::get('reqlist', 'DataRequestApiController@index');
+Route::post('/products', 'DataBarangApiController@store');
+Route::get('/products/{id}', 'DataBarangApiController@show');
+Route::put('/products/{id}', 'DataBarangApiController@update');
+Route::delete('/products/{id}', 'DataBarangApiController@hapus');
