@@ -113,6 +113,9 @@ Coded by www.creative-tim.com
                                             <th>
                                                 Price
                                             </th>
+                                            <th>
+                                                Status
+                                            </th>
                                         </thead>
                                         <tbody>
                                             @foreach($requestlist as $b)
@@ -137,6 +140,9 @@ Coded by www.creative-tim.com
                                                 </td>
                                                 <td>
                                                     {{ $b->price }}
+                                                </td>
+                                                <td>
+                                                    {{ $b->status }}
                                                 </td>
                                             </tr>
                                             @endforeach
