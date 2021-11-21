@@ -141,9 +141,16 @@ Coded by www.creative-tim.com
                                                 <td>
                                                     {{ $b->price }}
                                                 </td>
-                                                <td>
-                                                    {{ $b->status }}
+                                                @if($d->status == 'complete')
+                                                <td align="center">
+                                                    <p style="background-color: #00C851;color:white">{{$d->status}}</p>
                                                 </td>
+                                                @endif
+                                                @if($d->status == 'pending')
+                                                <td align="center">
+                                                    <p style="background-color: #616161;color:white">{{$d->status}}</p>
+                                                </td>
+                                                @endif
                                             </tr>
                                             @endforeach
                                         </tbody>
