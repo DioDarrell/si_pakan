@@ -141,14 +141,14 @@ Coded by www.creative-tim.com
                                                 <td>
                                                     {{ $b->price }}
                                                 </td>
-                                                @if($d->status == 'complete')
+                                                @if($b->status == 'complete')
                                                 <td align="center">
-                                                    <p style="background-color: #00C851;color:white">{{$d->status}}</p>
+                                                    <p style="background-color: #00C851;color:white">{{$b->status}}</p>
                                                 </td>
                                                 @endif
-                                                @if($d->status == 'pending')
+                                                @if($b->status == 'pending')
                                                 <td align="center">
-                                                    <p style="background-color: #616161;color:white">{{$d->status}}</p>
+                                                    <p style="background-color: #616161;color:white">{{$b->status}}</p>
                                                 </td>
                                                 @endif
                                             </tr>
