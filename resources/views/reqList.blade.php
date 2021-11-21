@@ -93,7 +93,7 @@ Coded by www.creative-tim.com
                                     <table class="table">
                                         <thead class=" text-primary text-success">
                                             <th>
-                                                Nama Customer
+                                                Nama
                                             </th>
                                             <th>
                                                 Nama Item
