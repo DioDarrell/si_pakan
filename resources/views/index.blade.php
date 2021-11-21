@@ -50,7 +50,7 @@ Coded by www.creative-tim.com
                     <li class="active ">
                         <a href="/">
                             <i class="nc-icon nc-tile-56"></i>
-                            <p>Table List</p>
+                            <p>Item List</p>
                         </a>
                     </li>
                     <li>
