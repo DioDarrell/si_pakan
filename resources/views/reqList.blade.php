@@ -141,16 +141,21 @@ Coded by www.creative-tim.com
                                                 <td>
                                                     {{ $b->price }}
                                                 </td>
-                                                @if($b->status == 'complete')
-                                                <td align="center">
-                                                    <p style="background-color: #00C851;color:white">{{$b->status}}</p>
-                                                </td>
-                                                @endif
-                                                @if($b->status == 'pending')
-                                                <td align="center">
-                                                    <p style="background-color: #616161;color:white">{{$b->status}}</p>
-                                                </td>
-                                                @endif
+                                                <select name="status">
+                                                    <option disabled>Choose option</option>
+                                                    @if($data->status == "pending")
+                                                    <option name="canceled" value="canceled">canceled</option>
+                                                    <option name="complete" value="complete">complete</option>
+                                                    @endif
+                                                    @if($data->status == "complete")
+                                                    <option name="canceled" value="canceled">canceled</option>
+                                                    <option name="pending" value="pending">pending</option>
+                                                    @endif
+                                                    @if($data->status == "canceled")
+                                                    <option name="complete" value="complete">complete</option>
+                                                    <option name="pending" value="pending">pending</option>
+                                                    @endif
+                                                </select>
                                             </tr>
                                             @endforeach
                                         </tbody>
