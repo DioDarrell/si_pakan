@@ -143,15 +143,15 @@ Coded by www.creative-tim.com
                                                 </td>
                                                 <select name="status">
                                                     <option disabled>Choose option</option>
-                                                    @if($data->status == "pending")
+                                                    @if($b->status == "pending")
                                                     <option name="canceled" value="canceled">canceled</option>
                                                     <option name="complete" value="complete">complete</option>
                                                     @endif
-                                                    @if($data->status == "complete")
+                                                    @if($b->status == "complete")
                                                     <option name="canceled" value="canceled">canceled</option>
                                                     <option name="pending" value="pending">pending</option>
                                                     @endif
-                                                    @if($data->status == "canceled")
+                                                    @if($b->status == "canceled")
                                                     <option name="complete" value="complete">complete</option>
                                                     <option name="pending" value="pending">pending</option>
                                                     @endif
