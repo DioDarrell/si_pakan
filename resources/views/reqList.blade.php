@@ -96,7 +96,7 @@ Coded by www.creative-tim.com
                                                 Nama
                                             </th>
                                             <th>
-                                                Nama Item
+                                                Item
                                             </th>
                                             <th>
                                                 Alamat
@@ -110,9 +110,9 @@ Coded by www.creative-tim.com
                                             <th>
                                                 Berat
                                             </th>
-                                            <th>
+                                            <!-- <th>
                                                 Price
-                                            </th>
+                                            </th> -->
                                             <th>
                                                 Status
                                             </th>
@@ -138,20 +138,23 @@ Coded by www.creative-tim.com
                                                 <td>
                                                     {{ $b->weight }}
                                                 </td>
-                                                <td>
+                                                <!-- <td>
                                                     {{ $b->price }}
-                                                </td>
+                                                </td> -->
                                                 <select name="status">
                                                     <option disabled>Choose option</option>
                                                     @if($b->status == "pending")
+                                                    <option name="current" value="{{$b->status}}" selected>{{$b->status}}</option>
                                                     <option name="canceled" value="canceled">canceled</option>
                                                     <option name="complete" value="complete">complete</option>
                                                     @endif
                                                     @if($b->status == "complete")
+                                                    <option name="current" value="{{$b->roles}}" selected>{{$b->status}}</option>
                                                     <option name="canceled" value="canceled">canceled</option>
                                                     <option name="pending" value="pending">pending</option>
                                                     @endif
                                                     @if($b->status == "canceled")
+                                                    <option name="current" value="{{$b->roles}}" selected>{{$b->status}}</option>
                                                     <option name="complete" value="complete">complete</option>
                                                     <option name="pending" value="pending">pending</option>
                                                     @endif

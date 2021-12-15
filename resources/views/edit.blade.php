@@ -50,7 +50,7 @@ Coded by www.creative-tim.com
                     <li class="active ">
                         <a href="/">
                             <i class="nc-icon nc-tile-56"></i>
-                            <p>Table List</p>
+                            <p>Item List</p>
                         </a>
                     </li>
                     <li>
@@ -174,24 +174,3 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
-<!-- <!DOCTYPE html>
-<html>
-<body>
-    <h3>Data Barang</h3>
-
-    <a href="/barang"> Kembali</a>
-
-    <br />
-    <br />
-
-    <form action="/barang/store" method="post">
-        {{ csrf_field() }}
-        Nama <input type="text" name="nama" required="required"> <br />
-        Jumlah <input type="int" name="jumlah" required="required"> <br />
-        Harga <input type="int" name="harga" required="required"> <br />
-        <input type="submit" value="Simpan Data">
-    </form>
-
-</body>
-
-</html> -->
