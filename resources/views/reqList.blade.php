@@ -110,9 +110,9 @@ Coded by www.creative-tim.com
                                             <th>
                                                 Berat
                                             </th>
-                                            <!-- <th>
+                                            <th>
                                                 Price
-                                            </th> -->
+                                            </th>
                                             <th>
                                                 Status
                                             </th>
@@ -138,9 +138,10 @@ Coded by www.creative-tim.com
                                                 <td>
                                                     {{ $b->weight }}
                                                 </td>
-                                                <!-- <td>
+                                                <td>
                                                     {{ $b->price }}
-                                                </td> -->
+                                                </td>
+                                                <td>
                                                 <select name="status">
                                                     <option disabled>Choose option</option>
                                                     @if($b->status == "pending")
@@ -159,6 +160,7 @@ Coded by www.creative-tim.com
                                                     <option name="pending" value="pending">pending</option>
                                                     @endif
                                                 </select>
+                                                </td>
                                             </tr>
                                             @endforeach
                                         </tbody>
